@@ -1,0 +1,9 @@
+[reader]
+family = "llava_video"
+model_path = "/models/LLaVA-Video-7B-Qwen2"
+revision = "REPLACE_WITH_SNAPSHOT_COMMIT"
+vision_tower_path = "/models/siglip-so400m-patch14-384"
+vision_revision = "REPLACE_WITH_SIGLIP_SNAPSHOT_COMMIT"
+conversation = "qwen_1_5"
+dtype = "bfloat16"
+devices = ["cuda:0", "cuda:1", "cuda:2", "cuda:3", "cuda:4", "cuda:5", "cuda:6", "cuda:7"]

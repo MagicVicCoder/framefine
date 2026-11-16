@@ -1,0 +1,1 @@
+{"id":"train-video-001-q1","video_path":"videos/example.mp4","question":"Which action happened first?","options":["Opening the door","Sitting on the chair","Turning on the light","Picking up the cup"],"answer_index":0,"metadata":{"split":"train","source_video":"example"}}

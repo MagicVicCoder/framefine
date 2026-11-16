@@ -1,0 +1,10 @@
+# Fill immutable local snapshot paths/revisions before use; no automatic download.
+[features]
+model_path = "/models/clip-vit-base-patch32"
+revision = "REPLACE_WITH_SNAPSHOT_COMMIT"
+device = "cuda:0"
+batch_size = 32
+
+[preparation]
+num_candidates = 32
+max_side = 448

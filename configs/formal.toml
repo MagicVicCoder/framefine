@@ -1,0 +1,39 @@
+# Use a measured profile before relying on the 48-hour target.
+actor_device = "cpu"
+
+[policy]
+hidden_dim = 64
+conditioning_nodes = 2
+temperature = 0.2
+
+[training]
+k = 8
+group_size = 8
+max_steps = 40000
+probe_every = 4
+cube_dimensions = 3
+relation_cubes = 1
+relation_weight = 0.2
+learning_rate = 0.0003
+grad_clip = 1.0
+seed = 17
+checkpoint_every = 100
+
+[budget]
+wall_hours = 48
+max_requests = 410000
+reserve_fraction = 0.2
+
+[validation]
+every = 1000
+max_examples = 64
+max_requests = 8192
+accuracy_tolerance = 0.03
+
+[reader]
+family = "qwen2_5_vl"
+model_path = ""
+revision = ""
+devices = ["cuda:0", "cuda:1", "cuda:2", "cuda:3", "cuda:4", "cuda:5", "cuda:6", "cuda:7"]
+max_pixels = 200704
+fps = 1.0

@@ -1,0 +1,18 @@
+# Analytic fixture: checks software only, not video understanding or convergence.
+actor_device = "cpu"
+[policy]
+hidden_dim = 16
+conditioning_nodes = 2
+temperature = 0.2
+[training]
+k = 4
+group_size = 2
+max_steps = 6
+probe_every = 2
+cube_dimensions = 3
+relation_weight = 0.2
+[budget]
+wall_hours = 0.1
+max_requests = 1000
+[reader]
+family = "toy"

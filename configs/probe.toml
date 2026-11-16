@@ -1,0 +1,40 @@
+# This profile defines a budget, not a claim of measured 4090 throughput.
+actor_device = "cpu"
+
+[policy]
+hidden_dim = 64
+conditioning_nodes = 2
+temperature = 0.2
+
+[training]
+k = 8
+group_size = 8
+max_steps = 1000
+probe_every = 4
+cube_dimensions = 3
+relation_cubes = 1
+relation_weight = 0.2
+learning_rate = 0.0003
+grad_clip = 1.0
+seed = 17
+checkpoint_every = 100
+
+[budget]
+wall_hours = 2
+max_requests = 10500
+reserve_fraction = 0.2
+
+[validation]
+# Enabled only when --validation-manifest is supplied; charged to global cap.
+every = 250
+max_examples = 32
+max_requests = 512
+accuracy_tolerance = 0.03
+
+[reader]
+family = "qwen2_5_vl"
+model_path = ""
+revision = ""
+devices = ["cuda:0", "cuda:1", "cuda:2", "cuda:3", "cuda:4", "cuda:5", "cuda:6", "cuda:7"]
+max_pixels = 200704
+fps = 1.0

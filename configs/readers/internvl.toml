@@ -1,0 +1,7 @@
+[reader]
+family = "internvl"
+model_path = "/models/InternVL2_5-8B"
+revision = "REPLACE_WITH_SNAPSHOT_COMMIT"
+dtype = "bfloat16"
+devices = ["cuda:0", "cuda:1", "cuda:2", "cuda:3", "cuda:4", "cuda:5", "cuda:6", "cuda:7"]
+vision_cache_frames = 64
